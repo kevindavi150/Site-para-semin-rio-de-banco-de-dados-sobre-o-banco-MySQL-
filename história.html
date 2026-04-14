@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MySQL Moderno</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #eef2f7, #dbeafe);
+      color: #1e293b;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      color: #2563eb;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #334155;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #2563eb;
+      color: white;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+    }
+
+    .hero-main {
+      background: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c') center/cover;
+      border-radius: 20px;
+      padding: 40px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-main::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: none;
+      margin-right: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-primary { background: #f59e0b; color: white; }
+    .btn-secondary { background: rgba(255,255,255,0.3); color: white; }
+    .btn-green { background: #10b981; color: white; }
+
+    .side-card {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .side-card h3 {
+      color: #f59e0b;
+      font-size: 28px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .card span {
+      color: #f59e0b;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+      background: white;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>MySQL</h1>
+  <nav>
+    <a href="introdução.html">Introdução</a>
+    <a href="história.html">História</a>
+    <a href="motivos.html">Por que usar</a>
+    <a href="como-usar.html">Como funciona</a>
+    <a href="apresentados.html">Apresentadores</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="hero">
+
+    <div class="hero-main">
+      <div class="hero-content">
+        <h2>Entenda Sobre MySQL</h2>
+        <p>Domine bancos de dados e leve seus projetos para outro nível com MySQL.</p>
+        <button class="btn btn-primary">Introdução</button>
+        <button class="btn btn-secondary">Por que usar MySQL?
+        </button>
+        <button class="btn btn-green">Como Funciona</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="side-card">
+        <h3>Criadores</h3>
+        <p> Michael "Monty" Widenius, David Axmark e Allan Larsson</p>
+      </div>
+
+      <div class="side-card">
+        <h3>Início do Projeto</h3>
+        <p>O MySQL foi criado em 1994, na empresa TcX na Suécia.</p>
+      </div>
+
+      <div class="side-card">
+        <h3>Primeira versão</h3>
+        <p>Foi desenvolvida para atender à demanda de aplicações web dinâmicas, utilizando linguagens C e C++ para garantir alta performance e portabilidade./p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <span>Motivo</span>
+      <h3>Necessidade</h3>
+      <p>Um banco de dados mais rápido que o mSQL, que não suportava índices adequadamente.</p>
+    </div>
+
+    <div class="card">
+      <span>Compainhas Fundadas</span>
+      <h3>Empresas</h3>
+      <p>Em 1995MySQL AB (companhia fundada pelos criadores)</p>
+      <p>Em 16 de janeiro de 2008, Sun Microsystems comprou por US$ 1 bilhão.</p>
+      <p>Em 20 de abril de 2009, Oracle Corporation</p>
+    </div>
+
+    <div class="card">
+      <span>Empresa Atual</span>
+      <h3>Oracle Corporation</h3>
+      <p>Atualmente, o sistema é mantido pela Oracle, com lançamentos estáveis recentes como a versão 9.3.0 em 15 de abril de 2025, consolidando-se como um dos SGBDs mais utilizados globalmente. </p>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <p>Site moderno sobre MySQL</p>
+</footer>
+</body>
+</html>
